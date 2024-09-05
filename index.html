@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HumanSeg - Página Principal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 0; /* Remover margens do body */
+        }
+        .container {
+            max-width: 600px; /* Limitar a largura do conteúdo */
+            margin: auto; /* Centralizar o conteúdo */
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 20px;
+            max-width: 200px;
+        }
+        label {
+            font-size: 1.2em;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        .emoji-options {
+            font-size: 2em;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .contact {
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 20px; /* Espaço acima da seção de contato */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="imagens/slb.png" alt="Logo HumanSeg" class="logo">
+
+        <form action="https://formspree.io/f/xovabldl" method="POST">
+            <label for="name">Seu Nome (opcional):</label>
+            <input type="text" id="name" name="name" placeholder="Digite seu nome (opcional)">
+
+            <label for="sector">Qual o seu setor?</label>
+            <input type="text" id="sector" name="sector" placeholder="Digite seu setor">
+
+            <label for="day">Como está seu dia?</label>
+            <div class="emoji-options">
+                <label>
+                    <input type="radio" name="day" value="😀 Feliz">
+                    😀
+                </label>
+                <label>
+                    <input type="radio" name="day" value="😐 Neutro">
+                    😐
+                </label>
+                <label>
+                    <input type="radio" name="day" value="😞 Triste">
+                    😞
+                </label>
+                <label>
+                    <input type="radio" name="day" value="😡 Irritado">
+                    😡
+                </label>
+            </div>
+
+            <label for="safety">Como ser seguro hoje?</label>
+            <textarea id="safety" name="safety" rows="4" placeholder="Escreva sua reflexão sobre como ser seguro hoje"></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+
+        <section class="contact">
+            <h2>Contato</h2>
+            <p><strong>Email:</strong> contato@humanseg.com</p>
+            <p><strong>Telefone:</strong> (xx) xxxx-xxxx</p>
+        </section>
+    </div>
+
+</body>
+</html>
